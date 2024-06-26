@@ -38,7 +38,7 @@
                         <!-- inserire icone per checkare e per togliere le tasks -->
                         <div class="col-icons">
                             <input type="checkbox" name="done" id="done" v-model="task.done">
-                            <i class="fa-solid fa-xmark"></i>
+                            <i @click="removeTask" class="fa-solid fa-xmark"></i>
                         </div>
                     </li>
                 </ul>
