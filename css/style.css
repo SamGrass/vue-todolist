@@ -16,9 +16,11 @@
 /* regole header */
 header {
     margin-bottom: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 .image-container{
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 1rem;
 }
@@ -45,12 +47,15 @@ h1 {
 /* regole lista */
 ul {
     list-style: none;
+    width: 100%;
 }
 .list {
     padding: 0.5em 0.8em;
     background-color: #ffffff79;
     border-radius: 0.5em;
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     transition: all 0.2s ease;
@@ -60,8 +65,14 @@ ul {
     box-shadow: 0 0 0.5rem 0.2rem #278fd494;
 }
 
-/* regole colonna icone */
+/* regole colonne */
 .col-icons {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
+.col-icons input{
+    width: 1.3rem;
+    aspect-ratio: 1/1;
+}
+
