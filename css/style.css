@@ -66,6 +66,9 @@ ul {
 }
 
 /* regole colonne */
+.col-text {
+    text-decoration: line-through;
+}
 .col-icons {
     display: flex;
     align-items: center;

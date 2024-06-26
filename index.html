@@ -32,12 +32,12 @@
                 <!-- lista che l'utente compilerà -->
                 <ul>
                     <li class="list" v-for="(task, index) in toDoList" :key="index">
-                        <div class="col-text">
+                        <div :class="task.done === true ? 'col-text' : ''">
                             {{task.text}}
                         </div>
                         <!-- inserire icone per checkare e per togliere le tasks -->
                         <div class="col-icons">
-                            <input type="checkbox" name="done" id="">
+                            <input type="checkbox" name="done" id="done" v-model="task.done">
                             <i class="fa-solid fa-xmark"></i>
                         </div>
                     </li>
