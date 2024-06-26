@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app" class="container">
+        <header>
+            <!-- logo e titolo -->
+            <div class="image-container">
+                <img :src="image" alt="logo">
+            </div>
+            <h1>TO DO LIST</h1>
+        </header>
+
+        <main>
+            <!-- input tasks -->
+            <input type="text" name="" id="" placeholder="Inserisci task">
+            <!-- bottone per aggiungere tasks -->
+            <button>Aggiungi</button>
+            <!-- messaggio di errore per input tasks -->
+            <!-- <h2>Devi inserire almeno 5 caratteri</h2> -->
+
+            <!-- card to do list -->
+            <div class="card">
+                <!-- lista che l'utente compilerà -->
+                <ul>
+                    <li class="lista">
+                        {{toDoList}}
+                        <!-- inserire icone per checkare e per togliere le tasks -->
+                    </li>
+                </ul>
+                <!-- messaggio per to do list vuoto -->
+                <!-- <h2>Al momento non hai tasks</h2> -->
+            </div>
+        </main>
+    </div>
+        
+    <script type="text/javascript" src="js/myscript.js"></script>
+</body>
+</html>
