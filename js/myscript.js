@@ -4,6 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         image: "img/logoboolean.png",
+        taskText: '',
         toDoList: [
             {
                 text: 'compiti',
@@ -21,8 +22,15 @@ const { createApp } = Vue
         
       } 
     }, methods: {
+        addTask() {
+            let newTask = {
+                text: this.taskText,
+                done: 'false'
+            }
+            this.toDoList.unshift(newTask)
+        },
         removeTask(index) {
             this.toDoList.splice(index, 1)
         }
-    },
+    }, 
   }).mount('#app')
