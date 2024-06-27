@@ -4,7 +4,6 @@ const { createApp } = Vue
     data() {
       return {
         image: "img/logoboolean.png",
-        taskText: '',
         toDoList: [
             {
                 text: 'compiti',
@@ -19,15 +18,24 @@ const { createApp } = Vue
                 done: 'false',   
             }
         ],
+        taskText: "",
+        inputError: false,
         
       } 
     }, methods: {
         addTask() {
-            let newTask = {
-                text: this.taskText,
-                done: 'false'
+            if (this.taskText !== "" && this.taskText.lenght >= 4) {
+                let newTask = {
+                    text: this.taskText,
+                    done: 'false'
+                }
+                this.toDoList.unshift(newTask);
+                this.inputError = false;
+            } else {
+                this.inputError = true;
             }
-            this.toDoList.unshift(newTask)
+            console.log(this.taskText);
+            this.taskText = '';
         },
         removeTask(index) {
             this.toDoList.splice(index, 1)
