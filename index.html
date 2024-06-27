@@ -22,9 +22,11 @@
         <main>
             <!-- input tasks -->
             <input type="text" placeholder="Inserisci task" v-model="taskText" @keyup.enter="addTask">
+
             <!-- bottone per aggiungere tasks -->
             <button @click="addTask">Aggiungi</button>
-            
+            <!-- messaggio di errore per input tasks -->
+            <h2 v-if="inputError">Devi inserire almeno 3 caratteri</h2>
 
             <!-- card to do list -->
             <div class="card">
@@ -41,7 +43,8 @@
                         </div>
                     </li>
                 </ul>
-                
+                <!-- messaggio per to do list vuoto -->
+                <!-- <h2>Al momento non hai tasks</h2> -->
             </div>
         </main>
     </div>
