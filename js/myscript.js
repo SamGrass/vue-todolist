@@ -24,7 +24,7 @@ const { createApp } = Vue
       } 
     }, methods: {
         addTask() {
-            if (this.taskText !== "" && this.taskText.lenght >= 4) {
+            if (this.taskText !== "" && this.taskText.length >= 4) {
                 let newTask = {
                     text: this.taskText,
                     done: 'false'
